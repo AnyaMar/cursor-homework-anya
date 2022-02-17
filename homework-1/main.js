@@ -1,20 +1,22 @@
-const milkPrice = 15.678;
-const teaPrice = 123.965;
-const yogurtPrice = 90.2345;
+const MILK_PRICE = 15.678;
+const TEA_PRICE = 123.965;
+const YOGURT_PRICE = 90.2345;
 
-const MAX_PRICE = Math.max(milkPrice, teaPrice, yogurtPrice);
+const MAX_PRICE = Math.max(MILK_PRICE, TEA_PRICE, YOGURT_PRICE);
 console.log(MAX_PRICE);
 
-const MIN_PRICE = Math.min(milkPrice, teaPrice, yogurtPrice);
+const MIN_PRICE = Math.min(MILK_PRICE, TEA_PRICE, YOGURT_PRICE);
 console.log(MIN_PRICE);
 
-let sum = milkPrice + teaPrice + yogurtPrice;
+let sum = MILK_PRICE + TEA_PRICE + YOGURT_PRICE;
 console.log(sum);
 
-const NEW_SUM = Math.floor(milkPrice) + Math.floor(teaPrice) + Math.floor(yogurtPrice);
+const NEW_SUM = Math.floor(MILK_PRICE) 
++ Math.floor(TEA_PRICE) 
++ Math.floor(YOGURT_PRICE);
 console.log(NEW_SUM);
 
-const SUM_ROUNDED_TO_HUNDREDS = Math.round(sum/100) * 100;
+const SUM_ROUNDED_TO_HUNDREDS = Math.round(sum / 100) * 100;
 console.log(SUM_ROUNDED_TO_HUNDREDS); 
 
 const EVEN = NEW_SUM % 2 === 0;
@@ -30,12 +32,12 @@ console.log(averageNumber);
 let discount = Math.round(Math.random() * 80 + 10);
 
 
-const sumWithDiscount = sum -(sum / 100 * discount);
-console.log(`${sumWithDiscount.toFixed(2)} сума до сплати з випадковою знижкою`);
+const sumWithDiscount = (sum - (sum / 100 * discount)).toFixed(2);
+console.log(`${sumWithDiscount} сума до сплати з випадковою знижкою`);
 
 
 const cost = Math.floor(sumWithDiscount) / 2;
-let netProfit = cost - Math.round(Math.floor(sumWithDiscount)/100 * discount);
+let netProfit = cost - Math.round(Math.floor(sumWithDiscount) / 100 * discount);
 console.log(`${netProfit} це чистий прибуток`);
 
 
@@ -49,6 +51,6 @@ console.log(`Максимальна ціна: ${MAX_PRICE}
 Cума решти, при оплаті всіх товарів (без округлення), якщо клієнт платить 500 грн: ${REST}
 Cереднє значення цін, округлене до другого знаку після коми: ${averageNumber}
 Випадкова знижка: ${discount}
-Сума до сплати з випадковою знижкою: ${sumWithDiscount.toFixed(2)}
+Сума до сплати з випадковою знижкою: ${sumWithDiscount}
 Чистий прибуток: ${netProfit}`);
 

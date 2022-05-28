@@ -104,14 +104,12 @@ function eleveteToDegree(number, degree) {
   document.writeln(`Функція №1: ${getMaxDigit("345678")}`);
   document.writeln(`Функція №2: ${formatName("дМИтРО")}`);
   document.writeln(`Функція №3: ${amountOfSalary(1000, 19.5)}`);  document.writeln(`Функція №4: ${getRandomNumber(1, 10)}`);
-  document.writeln(`Функція №5: ${getRandomNumber(1, 10)}`);
-  document.writeln(`Функція №6: ${countLetter("e", "celece")}`);
-  document.writeln(`Функція №7: ${convertCurrency('100UAH')}`);
-  document.writeln(`Функція №8: ${getRandomPassword()}`);
-  document.writeln(`Функція №9: ${convertCurrency('100UAH')}`);
-  document.writeln(`Функція №10: ${deleteLetters('hello world')}`);
-  document.writeln(`Функція №11: ${isPalyndrom('Я несу гусеня')}`);
-  document.writeln(`Функція №12: ${eleveteToDegree(3, 2)}`);
+  document.writeln(`Функція №5: ${countLetter("e", "celece")}`);
+  document.writeln(`Функція №6: ${convertCurrency('100UAH')}`);
+  document.writeln(`Функція №7: ${getRandomPassword()}`);
+  document.writeln(`Функція №8: ${deleteLetters('hello world')}`);
+  document.writeln(`Функція №9: ${isPalyndrom('Я несу гусеня')}`);
+  document.writeln(`Функція №10: ${eleveteToDegree(3, 2)}`);
 
 
  

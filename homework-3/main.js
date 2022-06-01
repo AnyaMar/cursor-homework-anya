@@ -71,7 +71,7 @@ getRandomPassword();
 
 
 
-let deleteLetters = (str) => str.replace(/[aouiye]/gi, '');
+let deleteLetters = (str, letter) => str.replaceAll(letter, '');
 
 
 
@@ -107,7 +107,7 @@ function eleveteToDegree(number, degree) {
   document.writeln(`Функція №5: ${countLetter("e", "celece")}`);
   document.writeln(`Функція №6: ${convertCurrency('100UAH')}`);
   document.writeln(`Функція №7: ${getRandomPassword()}`);
-  document.writeln(`Функція №8: ${deleteLetters('hello world')}`);
+  document.writeln(`Функція №8: ${deleteLetters('hello world', 'o')}`);
   document.writeln(`Функція №9: ${isPalyndrom('Я несу гусеня')}`);
   document.writeln(`Функція №10: ${eleveteToDegree(3, 2)}`);
 

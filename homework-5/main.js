@@ -108,3 +108,22 @@ function divideByThree(str) {
   console.log(divideByThree('Commander'))
   console.log(divideByThree('live'))
 
+  //func10
+  function generateCombinations(word) {
+    if (word.length < 2) return [word];
+  
+    let combinations = [];
+  
+    for(let i = 0; i < word.length; i++){
+      let char = word[i];
+      let rest = generateCombinations(word.slice(0, i) + word.slice(i + 1));
+      
+      for(const comb of rest) {
+        combinations.push(char + comb);
+      }
+    }
+    return combinations;
+  }
+  
+  console.log(generateCombinations('man'));
+

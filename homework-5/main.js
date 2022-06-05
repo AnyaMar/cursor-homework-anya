@@ -107,5 +107,4 @@ function divideByThree(str) {
   
   console.log(divideByThree('Commander'))
   console.log(divideByThree('live'))
-  console.log(divideByThree('he lives in Lviv'))
 

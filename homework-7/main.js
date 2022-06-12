@@ -8,18 +8,18 @@ const litva = { tax: 0.15, middleSalary: 1509, vacancies: 1114 };
 function getMyTaxes(salary) {
   return Math.round(this.tax * salary);
 }
-console.log(getMyTaxes.call(ukraine, 10000));
+console.log(`getMyTaxes: ${getMyTaxes.call(ukraine, 10000)}`);
 
 
 function getMiddleTaxes() {
   return Math.round(this.tax * this.middleSalary);
 }
-console.log(getMiddleTaxes.call(ukraine));
+console.log(`getMiddleTaxes: ${getMiddleTaxes.call(ukraine)}`);
 
 function getTotalTaxes() {
   return Math.ceil(this.tax * this.middleSalary * this.vacancies);
 }
-console.log(getTotalTaxes.call(ukraine));
+console.log(`getTotalTaxes: ${getTotalTaxes.call(ukraine)}`);
 
 
 function getMySalary(country) {

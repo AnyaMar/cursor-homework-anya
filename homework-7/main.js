@@ -12,25 +12,25 @@ console.log(`getMyTaxes: ${getMyTaxes.call(ukraine, 10000)}`);
 
 
 function getMiddleTaxes() {
-  return Math.round(this.tax * this.middleSalary);
+  return (this.tax * this.middleSalary).toFixed(2);
 }
 console.log(`getMiddleTaxes: ${getMiddleTaxes.call(ukraine)}`);
 
 function getTotalTaxes() {
-  return Math.ceil(this.tax * this.middleSalary * this.vacancies);
+  return (this.tax * this.middleSalary * this.vacancies).toFixed(2);
 }
 console.log(`getTotalTaxes: ${getTotalTaxes.call(ukraine)}`);
 
 
-function getMySalary(country) {
-  const obj = {};
-  
-  let salary = Math.round(Math.random() * (2000 - 1500 + 1));
-  obj['salary'] = salary;
-  let taxes = Math.round(country.tax * salary);
-  obj['taxes'] = taxes;
-  let profit = Math.round(salary - taxes);
-  obj['profit'] = profit;
+function getMySalary(country) {  
+  const salary = Math.round(Math.random() * (2000 - 1500) + 1500);
+  const taxes = Math.round(country.tax * salary);
+  const profit = Math.round(salary - taxes);
+  const obj = {
+    salary: salary,
+    taxes: taxes,
+    profit: profit
+  }
   console.log(obj);
 }
 setInterval(getMySalary, 10000, ukraine);

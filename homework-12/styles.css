@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Trispace', sans-serif;
+    justify-content: center;
+    padding: 10px;
+}
+
+.сontainer{
+    display: flex;
+}
+
+.buttons {
+  min-width: 100px;
+  appearance: none;
+  border: 0;
+  border-radius: 5px;
+  background: #4676d7;
+  color: #fff;
+  padding: 8px 16px;
+  margin: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+
+
+
+

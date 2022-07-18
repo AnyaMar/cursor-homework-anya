@@ -28,7 +28,7 @@ while(1) {
 }
 
 const fontGenerator = newFontGenerator(14);
-console.log(fontGenerator.next('up'));
-console.log(fontGenerator.next('down'));
-console.log(fontGenerator.next('up'));
-console.log(fontGenerator.next('up'));
+console.log(fontGenerator.next('up').value);
+console.log(fontGenerator.next('down').value);
+console.log(fontGenerator.next('up').value);
+console.log(fontGenerator.next('up').value);

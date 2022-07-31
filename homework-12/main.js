@@ -1,8 +1,8 @@
-const button = document.querySelector('#button');
-const button1 = document.querySelector('#button1');
-const next = document.querySelector('#next');
+const btn_characters = document.querySelector('#btn_characters');
+const btn_planets = document.querySelector('#btn_planets');
+const btn_next = document.querySelector('#btn_next');
 
-const container = document.querySelector('#container0');
+const container = document.querySelector('#characters_container');
 const container1 = document.querySelector('#container1');
 
 const BASE_URL = 'https://swapi.dev/api/';
@@ -19,7 +19,7 @@ async function getUsers() {
         <p>Birth: ${data.birth_year}</p>
         <p>Gender: ${data.gender}</p>`;
 };
-button.disabled = true;
+btn_characters.disabled = true;
 };
 
 async function getPlanets() {
@@ -29,7 +29,7 @@ async function getPlanets() {
     container1.innerHTML += `
     <h2>${data.results[i].name}</h2>`
   };
- button1.disabled = true;
+  btn_planets.disabled = true;
 }
 
 let counter = 2;
@@ -43,8 +43,13 @@ async function getNextPlanets() {
       <h2>${data.results[i].name}</h2>`
     }
     counter++;
+if (counter == 7 ) {
+  btn_next.classList.add('disactive');
+};    
 }
 
-button.addEventListener('click', getUsers);
-button1.addEventListener('click', getPlanets);
-next.addEventListener('click', getNextPlanets);
+
+btn_characters.addEventListener('click', getUsers);
+btn_planets.addEventListener('click', getPlanets);
+btn_next.addEventListener('click', getNextPlanets);
+

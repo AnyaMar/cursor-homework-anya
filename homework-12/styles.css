@@ -13,6 +13,16 @@ body {
     display: flex;
 }
 
+.disactive {
+    display: none;
+ }
+
+ .buttons[disabled]{
+    color: #d2d5db;
+    background: #6c7589;
+    cursor: not-allowed;    
+  }
+
 .buttons {
   min-width: 100px;
   appearance: none;
@@ -25,6 +35,4 @@ body {
   font-size: 1rem;
   cursor: pointer;
 
-
-
-
+  
